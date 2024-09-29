@@ -47,13 +47,13 @@ const userSchema = mongoose.Schema(
 		linkedin: {  // LinkedIn field added
 			type: String,
 			default: "",
-			validate: {
-				validator: function (v) {
-					// Basic validation for LinkedIn URL format
-					return /^https:\/\/(www\.)?linkedin\.com\/.*$/.test(v);
-				},
-				message: props => `${props.value} is not a valid LinkedIn URL!`,
-			},
+			// validate: {
+			// 	validator: function (v) {
+			// 		// Basic validation for LinkedIn URL format
+			// 		return /^https:\/\/(www\.)?linkedin\.com\/.*$/.test(v);
+			// 	},
+			// 	message: props => `${props.value} is not a valid LinkedIn URL!`,
+			// },
 		},
 		isFrozen: {
 			type: Boolean,
